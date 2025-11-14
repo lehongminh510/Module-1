@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp kết  thúc khi nhập -1</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let x = parseInt(prompt('Nhập số vào đây'));
+let sum = 0;
+while (x != -1) {
+sum += x;
+    x = parseInt(prompt('Nhập số vào đây'));
+}
+document.getElementById("result").innerHTML = "Tổng: " + sum;
+</script>
+</body>
+</html>
