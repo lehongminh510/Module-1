@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<label for="input">Nhập các số, cách nhau bằng dấu phẩy</label>
+<input type="text" id="input">
+<button onclick="timSoNguyenTo()">Tìm số nguyên tố</button>
+<p id="arrayDisplay"></p>
+<p id="result"></p>
+
+<script>
+    function check(x) {
+        if (x<2) return false;
+        for (let i=2;i<x;i++) {
+            if (x % i === 0) return false;
+        }
+        return true;
+    }
+
+    function addAndSortArray(arr) {
+        let array = [];
+        for (let num of arr) {
+            if (check(num)) {
+                array.push(num);
+            }
+        }
+        array.sort((a,b) => a - b);
+        return array;
+    }
+    function timSoNguyenTo() {
+        let input = document.getElementById("input").value;
+        let arr = input.split(",").map(num => Number(num));
+        let soNguyenTo = addAndSortArray(arr);
+        if (soNguyenTo.length > 0) {
+            document.getElementById("arrayDisplay").innerHTML = "Các số nguyên tố là: " + soNguyenTo.toString();
+        } else {
+            document.getElementById("result").innerHTML = "Khong co so nguyen to"
+        }
+    }
+
+</script>
+</body>
+</html>

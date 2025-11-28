@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="Nhập text bất kì để đếm ký tự in hoa" style="width: 300px">
+<button onClick="truyenText()">Đếm</button>
+<p id="result"></p>
+<script>
+    function demInHoa(str) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i];
+            if (char >= 'A' && char <= 'Z') {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else
+            return "Không có ký tự in hoa";
+    }
+
+    function truyenText() {
+        let inputValue = document.getElementById("input").value;
+        let result = demInHoa(inputValue);
+        document.getElementById("result").innerHTML = "Số ký tự in hoa có trong text là: " + result;
+    }
+</script>
+</body>
+</html>
