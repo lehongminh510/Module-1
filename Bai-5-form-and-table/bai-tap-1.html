@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form cơ bản</title>
+</head>
+<body>
+<form style="border:1px solid black;width:500px;margin:auto; padding:10px;">
+    <h2 style="text-align: center;">Order form</h2>
+    <p>What would you like to buy?</p>
+    <select style="width:50px;">
+        <!--dùng thẻ style-->
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <p>How many you would like to order?</p>
+    <input type="radio" name="rd">1 - 10$ <br>
+    <input type="radio" name="rd">2 - 20$<br>
+    <input type="radio" name="rd">3 - 25$<br> <!--để cùng name = rd thì sẽ chỉ cho select 1-->
+    <p>Name <span style="color:#d62323">*</span></p>
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" size="15">
+    <br>
+    <br>
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" size="15">
+
+    <p>Email</p>
+    <input type="text" name="email" size="35">
+
+    <p>Phone number</p>
+        <input type="text" name="phone1" size="5"> -
+        <input type="text" name="phone2" size="5"> -
+        <input type="text" name="phone3" size="5">
+    <br>
+    <br>
+    <button value="submit" id="btnSubmit">Submit</button>
+</form>
+</body>
+</html>
