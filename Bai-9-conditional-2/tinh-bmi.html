@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+<label for="inputkg">Nhập cân nặng: (kg)</label>
+<input type="text" id="inputkg">
+<br>
+<label for="inputcm">Nhập chiều cao: (m)</label>
+<input type="text" id="inputcm">
+<br>
+<button id="btnKiemtra" onclick="tinhChiso()">Kiểm tra</button>
+
+<script>
+    function tinhChiso() {
+        let cannang = parseInt(document.getElementById("inputkg").value);
+        let chieucao = parseFloat(document.getElementById("inputcm").value);
+        let bmi = cannang / (chieucao * chieucao);
+        if (bmi < 18.5) {
+            document.write("Underweight");
+        } else if (bmi < 25) {
+            document.write("Normal");}
+        else {
+            document.write("Overweight");
+        }
+        }
+</script>
+</body>
+</html>
+
+<!-- lỗi cần lưu ý:
+viết tên function cách chữ function
+parseFloat lấy số thập phân
