@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch case</title>
+    <style>
+        body {
+            font-family: Times New Roman;
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<input type="text" placeholder="Nhập tháng" id="month">
+<button id="btn" onclick="checkDay()">Check</button>
+<p id="result"></p>
+
+<script>
+    function checkDay() {
+        let month = parseInt(document.getElementById("month").value);
+        let text;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+                text = "Tháng " + month + " có 31 ngày";
+                break;
+            case 4:
+                text =  "Tháng " + month + " có 30 ngày"
+                break;
+            case 2:
+                text =  "Tháng " + month + " có 29 ngày"
+                break;
+            default :
+                text = "";
+        }
+document.getElementById("result").innerHTML= text;
+    }
+</script>
+</body>
+</html>
