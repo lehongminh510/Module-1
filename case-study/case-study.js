@@ -52,11 +52,6 @@ function renderTable() {
     }
 }
 
-function saveData() {
-    localStorage.setItem("students", JSON.stringify(students));
-    alert("Đã lưu!");
-}
-
 window.onload = function () {
     let data = localStorage.getItem("students");
 
