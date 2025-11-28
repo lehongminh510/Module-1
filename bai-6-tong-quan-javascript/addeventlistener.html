@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện event listnener</title>
+</head>
+<body>
+<p> Select a car from the list </p>
+<select id="mySelect">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+</select>
+<script>
+var selectedElement = document.getElementById("mySelect");
+selectedElement.addEventListener("change", changeFunction);
+function changeFunction(){
+alert(selectedElement.value);
+}
+</script>
+</body>
+</html>

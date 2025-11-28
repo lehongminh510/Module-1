@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Quản lý học viên</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            padding: 50px;
+            width: 300px;
+            margin: auto;
+            border: 1px;
+        }
+
+        .form-box input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .btn-add {
+            background-color: lightgreen;
+        }
+
+        .btn-save {
+            background-color: yellow;
+        }
+
+    </style>
+    <script src="case-study.js"></script>
+</head>
+<body>
+
+<h1>Quản lý học viên</h1>
+
+<div class="form-box">
+    <label for="id">ID</label>
+    <input type="text" id="id">
+
+    <label for="name">Họ tên</label>
+    <input type="text" id="name">
+
+    <label for="dob">Ngày sinh</label>
+    <input type="date" id="dob">
+
+    <label for="gender">Giới tính</label>
+    <select id="gender">
+        <option value="Nữ">Nữ</option>
+        <option value="Nam">Nam</option>
+    </select>
+
+    <label for="class">Lớp</label>
+    <input type="text" id="class">
+
+    <label for="image">Ảnh</label>
+    <input type="file" id="image">
+
+    <button class="btn-add" onclick="addStudent()">Add</button>
+    <button class="btn-save" onclick="saveData()">Save</button>
+</div>
+
+<h2 style="text-align:center;">Danh sách học viên</h2>
+
+<table id="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
+        <th>Giới tính</th>
+        <th>Lớp</th>
+        <th>Ảnh</th>
+    </tr>
+    </thead>
+    <tbody id="body"></tbody>
+</table>
+
+</body>
+</html>

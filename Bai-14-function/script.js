@@ -70,7 +70,7 @@ console.log('Xin chào');
 }
 sayHello();
 
-//arror function
+//arrow function
 const sayHello = () => {
     console.log('Xin chào');
 }

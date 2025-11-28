@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện onchange và eventlistener</title>
+</head>
+<body>
+<p> Select a new car from list</p>
+<select id="mySelect" onchange="do_something()">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+</select>
+<script>
+    function do_something(){
+        var selectedValue = document.getElementById("mySelect").value;
+        alert("You have selected: " + selectedValue);
+    }
+</script>
+</body>
+</html>
